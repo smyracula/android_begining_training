@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/name_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/name_label"
+            app:layout_constraintStart_toEndOf="@+id/name_label"
+            app:layout_constraintTop_toTopOf="@+id/name_label"
+            tools:text="name"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label"/>
+
+        <TextView
+            android:id="@+id/surname_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/surname_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/name_label"
+            app:layout_constraintTop_toBottomOf="@+id/name_label"/>
+
+        <TextView
+            android:id="@+id/surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/surname_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/surname_label"
+            tools:text="surname"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surname_label"/>
+
+        <TextView
+            android:id="@+id/born_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/born_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/surname_label"
+            app:layout_constraintTop_toBottomOf="@+id/surname_label"/>
+
+        <TextView
+            android:id="@+id/born"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/born_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/born_label"
+            tools:text="1988"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/born_label"/>
+
+        <TextView
+            android:id="@+id/from_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/from_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/born_label"
+            app:layout_constraintTop_toBottomOf="@+id/born_label"/>
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/from_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/from_label"
+            tools:text="İzmir"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_label"/>
+
+        <TextView
+            android:id="@+id/university_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/university_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/from_label"
+            app:layout_constraintTop_toBottomOf="@+id/from_label"/>
+
+        <TextView
+            android:id="@+id/university"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/university_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/university_label"
+            tools:text="Ege Üniversitesi"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/university_label"/>
+
+        <TextView
+            android:id="@+id/university_graduated_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/university_graduated_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/university_label"
+            app:layout_constraintTop_toBottomOf="@+id/university_label"/>
+
+        <TextView
+            android:id="@+id/university_graduated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/university_graduated_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/university_graduated_label"
+            tools:text="2011"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/university_graduated_label"/>
+
+        <TextView
+            android:id="@+id/highSchool_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/highSchool_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/university_graduated_label"
+            app:layout_constraintTop_toBottomOf="@+id/university_graduated_label"/>
+
+        <TextView
+            android:id="@+id/highSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/highSchool_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/highSchool_label"
+            tools:text="Tire Kutsan"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/highSchool_label"/>
+
+        <TextView
+            android:id="@+id/highSchool_graduated_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/highSchool_graduated_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/highSchool_label"
+            app:layout_constraintTop_toBottomOf="@+id/highSchool_label"/>
+
+        <TextView
+            android:id="@+id/highSchool_graduated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/highSchool_graduated_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/highSchool_graduated_label"
+            tools:text="2006"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/grey_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/highSchool_graduated_label"/>
+
+        <TextView
+            android:id="@+id/corporate_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/corporate_label"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/highSchool_graduated_label"
+            app:layout_constraintTop_toBottomOf="@+id/highSchool_graduated_label"/>
+
+        <TextView
+            android:id="@+id/corporate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/corporate_label"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/corporate_label"
+            tools:text="corporate"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/grey_light"
+            app:layout_constraintBottom_toBottomOf="@+id/corporate"
+            app:layout_constraintEnd_toStartOf="@+id/name"
+            app:layout_constraintTop_toTopOf="@+id/name"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

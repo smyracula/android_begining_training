@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@color/grey_darkest"
+            android:textColor="@color/white"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            android:textSize="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/acButton"
+            tools:text="122"/>
+
+        <Button
+            android:id="@+id/acButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_other"
+            android:text="AC"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/plusminusButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            app:layout_constraintBottom_toTopOf="@+id/sevenButton"/>
+
+        <Button
+            android:id="@+id/plusminusButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_other"
+            android:text="+/-"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/modButton"
+            app:layout_constraintStart_toEndOf="@id/acButton"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            app:layout_constraintBottom_toTopOf="@+id/eightButton"/>
+
+        <Button
+            android:id="@+id/modButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_other"
+            android:text="%"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/dividedButton"
+            app:layout_constraintStart_toEndOf="@+id/plusminusButton"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            app:layout_constraintBottom_toTopOf="@+id/nineButton"/>
+
+        <Button
+            android:id="@+id/dividedButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_op"
+            android:text="/"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/modButton"
+            app:layout_constraintTop_toBottomOf="@+id/result"
+            app:layout_constraintBottom_toTopOf="@+id/multiplyButton"/>
+
+
+        <Button
+            android:id="@+id/sevenButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="7"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/eightButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/acButton"
+            app:layout_constraintBottom_toTopOf="@+id/fourButton"/>
+
+        <Button
+            android:id="@+id/eightButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="8"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/nineButton"
+            app:layout_constraintStart_toEndOf="@id/sevenButton"
+            app:layout_constraintTop_toBottomOf="@+id/plusminusButton"
+            app:layout_constraintBottom_toTopOf="@+id/fiveButton"/>
+
+        <Button
+            android:id="@+id/nineButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="9"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/multiplyButton"
+            app:layout_constraintStart_toEndOf="@+id/eightButton"
+            app:layout_constraintTop_toBottomOf="@+id/modButton"
+            app:layout_constraintBottom_toTopOf="@+id/sixButton"/>
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_op"
+            android:text="X"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nineButton"
+            app:layout_constraintTop_toBottomOf="@+id/dividedButton"
+            app:layout_constraintBottom_toTopOf="@+id/subtractionButton"/>
+
+        <Button
+            android:id="@+id/fourButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="4"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/eightButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sevenButton"
+            app:layout_constraintBottom_toTopOf="@+id/oneButton"/>
+
+        <Button
+            android:id="@+id/fiveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="5"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/nineButton"
+            app:layout_constraintStart_toEndOf="@id/sevenButton"
+            app:layout_constraintTop_toBottomOf="@+id/eightButton"
+            app:layout_constraintBottom_toTopOf="@+id/twoButton"/>
+
+        <Button
+            android:id="@+id/sixButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="6"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/subtractionButton"
+            app:layout_constraintStart_toEndOf="@+id/eightButton"
+            app:layout_constraintTop_toBottomOf="@+id/nineButton"
+            app:layout_constraintBottom_toTopOf="@+id/threeButton"/>
+
+        <Button
+            android:id="@+id/subtractionButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_op"
+            android:text="-"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sixButton"
+            app:layout_constraintTop_toBottomOf="@+id/nineButton"
+            app:layout_constraintBottom_toTopOf="@+id/plusButton"/>
+
+        <Button
+            android:id="@+id/oneButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="1"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/eightButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fourButton"
+            app:layout_constraintBottom_toTopOf="@+id/zeroButton"/>
+
+        <Button
+            android:id="@+id/twoButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="2"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/nineButton"
+            app:layout_constraintStart_toEndOf="@id/sevenButton"
+            app:layout_constraintTop_toBottomOf="@+id/fiveButton"
+            app:layout_constraintBottom_toTopOf="@+id/zeroButton"/>
+
+        <Button
+            android:id="@+id/threeButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="3"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/plusButton"
+            app:layout_constraintStart_toEndOf="@+id/eightButton"
+            app:layout_constraintTop_toBottomOf="@+id/sixButton"
+            app:layout_constraintBottom_toTopOf="@+id/commaButton"/>
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_op"
+            android:text="+"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/threeButton"
+            app:layout_constraintTop_toBottomOf="@+id/sixButton"
+            app:layout_constraintBottom_toTopOf="@+id/equalsButton"/>
+
+        <Button
+            android:id="@+id/zeroButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text="0"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/eightButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oneButton"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/commaButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_number"
+            android:text=","
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/equalsButton"
+            app:layout_constraintStart_toEndOf="@+id/eightButton"
+            app:layout_constraintTop_toBottomOf="@+id/threeButton"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/equalsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_op"
+            android:text="="
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/commaButton"
+            app:layout_constraintTop_toBottomOf="@+id/threeButton"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

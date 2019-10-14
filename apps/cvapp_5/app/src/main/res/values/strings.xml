@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">cvapp_5</string>
+    <string name="name_label">İsim</string>
+    <string name="surname_label">Soyisim</string>
+    <string name="born_label">Doğum</string>
+    <string name="from_label">Memleket</string>
+    <string name="university_label">Üniversite</string>
+    <string name="university_graduated_label">Üniversite \nMezuniyet Yılı</string>
+    <string name="highSchool_label">Lise</string>
+    <string name="highSchool_graduated_label">Lise \nMezuniyet Yılı</string>
+    <string name="corporate_label">Şirket</string>
+</resources>

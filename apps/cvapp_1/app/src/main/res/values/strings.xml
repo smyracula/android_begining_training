@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">cvapp_1</string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>
