@@ -9,4 +9,7 @@
     <string name="highSchool_label">Lise</string>
     <string name="highSchool_graduated_label">Lise \nMezuniyet Yılı</string>
     <string name="corporate_label">Şirket</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,8 +1,5 @@
 package com.small.smyracula.cvapp_3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +10,13 @@ import com.small.smyracula.cvapp_3.model.Cv;
 
 import java.io.IOException;
 import java.io.InputStream;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Lifecycle;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -49,8 +53,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.name: {
-                startActivity(DetailActivity.newIntent(this, cv));
+                binding.detailContainer.setVisibility(View.VISIBLE);
+                binding.name.setVisibility(View.GONE);
+
+                if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
+                    int fragmentId = R.id.detail_container;
+                    Fragment fragment = DetailFragment.newInstance(cv);
+                    if (fragment != null && fragmentId != 0) {
+                        FragmentManager manager = getSupportFragmentManager();
+                        String tag = fragment.getClass().getName();
+                        if(!manager.popBackStackImmediate(tag,0)){
+                            FragmentTransaction tran = manager.beginTransaction();
+                            tran.add(fragmentId,fragment,tag);
+                            tran.addToBackStack(tag);
+                            tran.commit();
+                        }
+                    }
+                }
             }
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager manager = getSupportFragmentManager();
+        if(manager.findFragmentById(R.id.detail_container) != null){
+            binding.name.setVisibility(View.VISIBLE);
+            manager.popBackStack();
+            binding.detailContainer.setVisibility(View.GONE);
+        } else {
+            super.onBackPressed();
         }
     }
 }
